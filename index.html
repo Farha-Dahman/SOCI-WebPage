@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
+    <link rel="stylesheet" href="./assets/css/media.css" />
+    <title>SOCI</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand pe-4" href="#">
+                <img class="me-5" src="./assets/images/logo.png" alt="logo image" />
+            </a>
+            <div class="d-flex form-inputs align-items-center justify-content-center ps-3">
+                <input class="form-control" type="text" placeholder="Search">
+                <i class="fas fa-solid fa-magnifying-glass"></i>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <button class="navbar-toggler d-md-block d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#friendsContent" aria-controls="friendsContent" aria-expanded="true"
+                aria-label="Toggle navigation">
+                <span class="navbar-icon"><i class="fa-solid fa-user-group py-1"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><i
+                                class="fa-solid fa-user-plus"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-regular fa-comment-dots"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-regular fa-bell"></i></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=lano"
+                                alt="profile_picture" />
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">More</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="main-content" class="d-flex">
+        <aside class="app-menu col-lg-2">
+            <div class="menu mt-5 mb-5">
+                <ul class="shortcuts ps-3">
+                    <li class="mb-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fa-solid fa-chart-simple me-3"></i>
+                            <div>Feed</div>
+                        </div>
+                    </li>
+                    <li class="mb-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fa-solid fa-users me-3"></i>
+                            <div>Friends</div>
+                        </div>
+                    </li>
+                    <li class="mb-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fa-regular fa-calendar me-3"></i>
+                            <div>Events</div>
+                        </div>
+                    </li>
+                    <li class="mb-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fa-brands fa-youtube me-3"></i>
+                            <div>Watch Videos</div>
+                        </div>
+                    </li>
+                    <li class="mb-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fa-regular fa-image me-3"></i>
+                            <div>Photos</div>
+                        </div>
+                    </li>
+                    <li class="mb-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fa-regular fa-file-lines me-3"></i>
+                            <div>Files</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="pages-liked" class="pages-liked pb-5">
+                <div class="title m-3">pages you like</div>
+                <ul class="ps-3">
+                    <li class="mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="./assets/images/Fashion-Design.webp"
+                                alt="profile_picture" class="me-3" />
+                            <div>Fashion Design</div>
+                        </div>
+                    </li>
+                    <li class="mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="./assets/images/graphicdesign.jpg"
+                                alt="profile_picture" class="me-3" />
+                            <div>Graphic Design</div>
+                            <span class="d-flex align-items-center justify-content-center ms-auto me-1">25</span>
+                        </div>
+                    </li>
+                    <li class="mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="./assets/images/ui-community.webp"
+                                alt="profile_picture" class="me-3" />
+                            <div>UI/UX Community</div>
+                        </div>
+                    </li>
+                    <li class="mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="./assets/images/web-design.jpg"
+                                alt="profile_picture" class="me-3" />
+                            <div>Web Designer</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <section id="content" class="content container-fluid pt-3 pb-5">
+            <div class="row stories mb-4">
+                <h4>Stories</h4>
+                <div class="d-flex">
+                    <div class="d-block m-1 col-md-2 story position-relative ">
+                        <img src="./assets/images/story1.webp" alt="story" class="storyImg" />
+                        <div class="user-Info d-flex position-absolute align-items-center">
+                            <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=sally"
+                                alt="profile_picture" class="me-1 profileImg" />
+                            <h6 class="card-text">Alex Guerrero</h6>
+                        </div>
+                    </div>
+                    <div class="d-block m-1 col-md-2 story position-relative ">
+                        <img src="./assets/images/story2.webp" alt="story" class="storyImg" />
+                        <div class="user-Info d-flex position-absolute align-items-center">
+                            <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=ali"
+                                alt="profile_picture" class="me-1 profileImg" />
+                            <h6 class="card-text">Ronald Roberts</h6>
+                        </div>
+                    </div>
+                    <div class="d-block m-1 col-md-2 story position-relative ">
+                        <img src="./assets/images/story3.jpg" alt="story" class="storyImg" />
+                        <div class="user-Info d-flex position-absolute align-items-center">
+                            <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=sara"
+                                alt="profile_picture" class="me-1 profileImg" />
+                            <h6 class="card-text sm-display">Nancy Lee</h6>
+                        </div>
+                    </div>
+                    <div class="d-block sm-display m-1 col-md-2 story position-relative ">
+                        <img src="./assets/images/story4.jpg" alt="story" class="storyImg" />
+                        <div class="user-Info d-flex position-absolute align-items-center">
+                            <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=nick"
+                                alt="profile_picture" class="me-1 profileImg" />
+                            <h6 class="card-text">Nick Loren</h6>
+                        </div>
+                    </div>
+                    <div class="d-block sm-display m-1 col-md-2 story position-relative ">
+                        <img src="./assets/images/story5.jpg" alt="story" class="storyImg" />
+                        <div class="user-Info d-flex position-absolute align-items-center">
+                            <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=Jerry"
+                                alt="profile_picture" class="me-1 profileImg" />
+                            <h6 class="card-text">Jerry Jordan</h6>
+                        </div>
+                    </div>
+                    <div class="d-block sm-display md-display lg-display m-1 col-md-2 story position-relative ">
+                        <img src="./assets/images/story6.jpg" alt="story" class="storyImg" />
+                        <div class="user-Info d-flex position-absolute align-items-center">
+                            <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=Marie"
+                                alt="profile_picture" class="me-1 profileImg" />
+                            <h6 class="card-text">Marie Jacksone</h6>
+                        </div>
+                    </div>
+                    <div class="d-block sm-display md-display lg-display m-1 col-md-2 story position-relative ">
+                        <img src="./assets/images/story7.jpg" alt="story" class="storyImg" />
+                        <div class="user-Info d-flex position-absolute align-items-center">
+                            <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=alla"
+                                alt="profile_picture" class="me-1 profileImg" />
+                            <h6 class="card-text">Ali Jack</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="posts" class="posts">
+                <div class="post-menu d-flex align-items-center pb-2">
+                    <h4>Recent Post</h4>
+                    <div class="post-option d-flex flex-sm-column ms-auto">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link me-3 active text-capitalize" id="feed-tab" data-bs-toggle="tab"
+                                    data-bs-target="#feeds-tab-pane" type="button" role="tab"
+                                    aria-controls="feeds-tab-pane" aria-selected="true">Feeds</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link me-3 text-capitalize" id="all-tab" data-bs-toggle="tab"
+                                    data-bs-target="#all-tab-pane" type="button" role="tab" aria-controls="all-tab-pane"
+                                    aria-selected="false">All</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link me-3 text-capitalize" id="following-tab" data-bs-toggle="tab"
+                                    data-bs-target="#following-tab-pane" type="button" role="tab"
+                                    aria-controls="following-tab-pane" aria-selected="false">Following</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link me-2 text-capitalize" id="latest-tab" data-bs-toggle="tab"
+                                    data-bs-target="#latest-tab-pane" type="button" role="tab"
+                                    aria-controls="latest-tab-pane" aria-selected="false">Latest</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link me-3 text-capitalize" id="popular-tab" data-bs-toggle="tab"
+                                    data-bs-target="#popular-tab-pane" type="button" role="tab"
+                                    aria-controls="popular-tab-pane" aria-selected="false">Popular</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-content post-content container p-0" id="myTabContent">
+                    <div class="tab-pane fade" id="all-tab-pane" role="tabpanel" aria-labelledby="all-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-md-6 py-2">
+                                <div class="card-item bg-white">
+                                    <img src="assets/images/image1.jpg" class="post-Image w-100 p-1" alt="post image">
+                                    <div class="Image-Info d-flex w-100 px-3 py-2">
+                                        <div class="desc card-body w-100">
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=farah"
+                                                        alt="profile_picture" class="me-2" />
+                                                    <h6 class="card-title">Sara Mendoza</h6>
+                                                    <div class="d-flex ms-auto">
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-heart icon"></i>1125</span>
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-comment-dots icon"></i>348</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <article class="card-text">
+                                                <cite><span>#</span>Vivarmus</cite>
+                                                <cite><span>#</span>suscipit</cite>
+                                                <cite><span>#</span>nature</cite>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A cum,
+                                                    maiores doloribus laboriosam molestias id at libero perspiciatis
+                                                    temporibus vero.</p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 py-2">
+                                <div class="card-item bg-white">
+                                    <img src="assets/images/image2.jpg" class="post-Image w-100 p-1" alt="post image">
+                                    <div class="Image-Info d-flex w-100 px-3 py-2">
+                                        <div class="card-body desc w-100">
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=yara"
+                                                        alt="profile_picture" class="me-2" />
+                                                    <h6 class="card-title">Yara Powell</h6>
+                                                    <div class="d-flex ms-auto">
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-heart icon"></i>285</span>
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-comment-dots icon"></i>680</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <article class="card-text">
+                                                <cite><span>#</span>Vivarmus</cite>
+                                                <cite><span>#</span>suscipit</cite>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 py-2">
+                                <div class="card-item bg-white">
+                                    <img src="assets/images/image3.jpg" class="post-Image w-100 p-1" alt="post image">
+                                    <div class="Image-Info d-flex w-100 px-3 py-2">
+                                        <div class="card-body desc w-100">
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=asma"
+                                                        alt="profile_picture" class="me-2" />
+                                                    <h6 class="card-title">Nancy Lee</h6>
+                                                    <div class="d-flex ms-auto">
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-heart icon"></i>123</span>
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-comment-dots icon"></i>78</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <article class="card-text">
+                                                <cite><span>#</span>suscipit</cite>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A cum,
+                                                    maiores doloribus laboriosam molestias.</p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 py-2">
+                                <div class="card-item bg-white">
+                                    <img src="assets/images/image4.jpg" class="post-Image w-100 p-1" alt="post image">
+                                    <div class="Image-Info d-flex w-100 px-3 py-2">
+                                        <div class="card-body desc w-100">
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=Jerry"
+                                                        alt="profile_picture" class="me-2" />
+                                                    <h6 class="card-title">Jerry Jordan</h6>
+                                                    <div class="d-flex ms-auto">
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-heart icon"></i>1007</span>
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-comment-dots icon"></i>948</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <article class="card-text">
+                                                <cite><span>#</span>Vivarmus</cite>
+                                                <cite><span>#</span>suscipit</cite>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 py-2">
+                                <div class="card-item bg-white">
+                                    <img src="assets/images/image5.webp" class="post-Image w-100 p-1" alt="post image">
+                                    <div class="Image-Info d-flex w-100 px-3 py-2">
+                                        <div class="card-body desc w-100">
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=Marie"
+                                                        alt="profile_picture" class="me-2" />
+                                                    <h6 class="card-title">Marie Jacksone</h6>
+                                                    <div class="d-flex ms-auto">
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-heart icon"></i>105</span>
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-comment-dots icon"></i>78</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <article>
+                                                <cite><span>#</span>Vivarmus</cite>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A cum,
+                                                    maiores doloribus laboriosam.</p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 py-2">
+                                <div class="card-item bg-white">
+                                    <img src="assets/images/image6.jpg" class="post-Image w-100 p-1" alt="post image">
+                                    <div class="Image-Info d-flex w-100 px-3 py-2">
+                                        <div class="card-body desc w-100">
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=Jerry"
+                                                        alt="profile_picture" class="me-2" />
+                                                    <h6 class="card-title">Go Meeny</h6>
+                                                    <div class="d-flex ms-auto">
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-heart icon"></i>115</span>
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-comment-dots icon"></i>38</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <article class="card-text">
+                                                <cite><span>#</span>Vivarmus</cite>
+                                                <cite><span>#</span>suscipit</cite>
+                                                <cite><span>#</span>world</cite>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A cum,
+                                                    maiores doloribus laboriosam molestias id at libero perspiciatis
+                                                    temporibus vero.</p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade show active" id="feeds-tab-pane" role="tabpanel"
+                        aria-labelledby="feeds-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-md-6 py-2">
+                                <div class="card-item bg-white">
+                                    <img src="assets/images/image3.jpg" class="post-Image w-100 p-1" alt="post image">
+                                    <div class="Image-Info d-flex w-100 px-3 py-2">
+                                        <div class="card-body desc w-100">
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=asma"
+                                                        alt="profile_picture" class="me-2" />
+                                                    <h6 class="card-title">Nancy Lee</h6>
+                                                    <div class="d-flex ms-auto">
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-heart icon"></i>123</span>
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-comment-dots icon"></i>78</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <article class="card-text">
+                                                <cite><span>#</span>suscipit</cite>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A cum,
+                                                    maiores doloribus laboriosam molestias.</p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 py-2">
+                                <div class="card-item bg-white">
+                                    <img src="assets/images/image4.jpg" class="post-Image w-100 p-1" alt="post image">
+                                    <div class="Image-Info d-flex w-100 px-3 py-2">
+                                        <div class="card-body desc w-100">
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=Jerry"
+                                                        alt="profile_picture" class="me-2" />
+                                                    <h6 class="card-title">Jerry Jordan</h6>
+                                                    <div class="d-flex ms-auto">
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-heart icon"></i>1007</span>
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-comment-dots icon"></i>948</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <article class="card-text">
+                                                <cite><span>#</span>Vivarmus</cite>
+                                                <cite><span>#</span>suscipit</cite>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="following-tab-pane" role="tabpanel" aria-labelledby="following-tab"
+                        tabindex="0">
+                        <div class="row">
+                            <div class="col-md-6 py-2">
+                                <div class="card-item bg-white">
+                                    <img src="assets/images/image3.jpg" class="post-Image w-100 p-1" alt="post image">
+                                    <div class="Image-Info d-flex w-100 px-3 py-2">
+                                        <div class="card-body desc w-100">
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=asma"
+                                                        alt="profile_picture" class="me-2" />
+                                                    <h6 class="card-title">Nancy Lee</h6>
+                                                    <div class="d-flex ms-auto">
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-heart icon"></i>123</span>
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-comment-dots icon"></i>78</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <article class="card-text">
+                                                <cite><span>#</span>suscipit</cite>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A cum,
+                                                    maiores doloribus laboriosam molestias.</p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 py-2">
+                                <div class="card-item bg-white">
+                                    <img src="assets/images/image4.jpg" class="post-Image w-100 p-1" alt="post image">
+                                    <div class="Image-Info d-flex w-100 px-3 py-2">
+                                        <div class="card-body desc w-100">
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=Jerry"
+                                                        alt="profile_picture" class="me-2" />
+                                                    <h6 class="card-title">Jerry Jordan</h6>
+                                                    <div class="d-flex ms-auto">
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-heart icon"></i>1007</span>
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-comment-dots icon"></i>948</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <article class="card-text">
+                                                <cite><span>#</span>Vivarmus</cite>
+                                                <cite><span>#</span>suscipit</cite>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 py-2">
+                                <div class="card-item bg-white">
+                                    <img src="assets/images/image5.webp" class="post-Image w-100 p-1" alt="post image">
+                                    <div class="Image-Info d-flex w-100 px-3 py-2">
+                                        <div class="card-body desc w-100">
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=Marie"
+                                                        alt="profile_picture" class="me-2" />
+                                                    <h6 class="card-title">Marie Jacksone</h6>
+                                                    <div class="d-flex ms-auto">
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-heart icon"></i>105</span>
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-comment-dots icon"></i>78</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <article class="card-text">
+                                                <cite><span>#</span>Vivarmus</cite>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A cum,
+                                                    maiores doloribus laboriosam.</p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="latest-tab-pane" role="tabpanel" aria-labelledby="latest-tab"
+                        tabindex="0">
+                        <div class="row">
+                            <div class="col-md-6 py-2">
+                                <div class="card-item bg-white">
+                                    <img src="assets/images/image2.jpg" class="post-Image w-100 p-1" alt="post image">
+                                    <div class="Image-Info d-flex w-100 px-3 py-2">
+                                        <div class="card-body desc w-100">
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=yara"
+                                                        alt="profile_picture" class="me-2" />
+                                                    <h6 class="card-title">Yara Powell</h6>
+                                                    <div class="d-flex ms-auto">
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-heart icon"></i>285</span>
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-comment-dots icon"></i>680</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <article class="card-text">
+                                                <cite><span>#</span>Vivarmus</cite>
+                                                <cite><span>#</span>suscipit</cite>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 py-2">
+                                <div class="card-item bg-white">
+                                    <img src="assets/images/image4.jpg" class="post-Image w-100 p-1" alt="post image">
+                                    <div class="Image-Info d-flex w-100 px-3 py-2">
+                                        <div class="card-body desc w-100">
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=Jerry"
+                                                        alt="profile_picture" class="me-2" />
+                                                    <h6 class="card-title">Jerry Jordan</h6>
+                                                    <div class="d-flex ms-auto">
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-heart icon"></i>1007</span>
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-comment-dots icon"></i>948</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <article class="card-text">
+                                                <cite><span>#</span>Vivarmus</cite>
+                                                <cite><span>#</span>suscipit</cite>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 py-2">
+                                <div class="card-item bg-white">
+                                    <img src="assets/images/image6.jpg" class="post-Image w-100 p-1" alt="post image">
+                                    <div class="Image-Info d-flex w-100 px-3 py-2">
+                                        <div class="card-body desc w-100">
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=Jerry"
+                                                        alt="profile_picture" class="me-2" />
+                                                    <h6 class="card-title">Go Meeny</h6>
+                                                    <div class="d-flex ms-auto">
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-heart icon"></i>115</span>
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-comment-dots icon"></i>38</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <article class="card-text">
+                                                <cite><span>#</span>Vivarmus</cite>
+                                                <cite><span>#</span>suscipit</cite>
+                                                <cite><span>#</span>world</cite>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A cum,
+                                                    maiores doloribus laboriosam molestias id at libero perspiciatis
+                                                    temporibus vero.</p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="popular-tab-pane" role="tabpanel" aria-labelledby="popular-tab"
+                        tabindex="0">
+                        <div class="row">
+                            <div class="col-md-6 py-2">
+                                <div class="card-item bg-white">
+                                    <img src="assets/images/image1.jpg" class="post-Image w-100 p-1" alt="post image">
+                                    <div class="Image-Info d-flex w-100 px-3 py-2">
+                                        <div class="card-body desc w-100">
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=farah"
+                                                        alt="profile_picture" class="me-2" />
+                                                    <h6 class="card-title">Sara Mendoza</h6>
+                                                    <div class="d-flex ms-auto">
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-heart icon"></i>1125</span>
+                                                        <span
+                                                            class="active ms-auto d-flex align-items-center justify-content-center"><i
+                                                                class="fa-regular fa-comment-dots icon"></i>348</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <article class="card-text">
+                                                <cite><span>#</span>Vivarmus</cite>
+                                                <cite><span>#</span>suscipit</cite>
+                                                <cite><span>#</span>nature</cite>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A cum,
+                                                    maiores doloribus laboriosam molestias id at libero perspiciatis
+                                                    temporibus vero.</p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section class="collapse navbar-toggler col-lg-3 friends d-lg-block" id="friendsContent">
+            <div class="d-flex form-inputs position-relative align-items-center ps-3">
+                <input class="form-control ps-5" type="text" placeholder="Search...">
+                <i class="fas fa-solid fa-magnifying-glass position-absolute"></i>
+            </div>
+                <ul>
+                    <li>
+                        <div class="title my-3">friends</div>
+                    </li>
+                    <li class="mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=sally"
+                                alt="profile_picture" class="me-2" />
+                            <h6>Alex Guerrero</h6>
+                            <span class="inactive ms-auto me-1">10 min</span>
+                        </div>
+                    </li>
+                    <li class="mb-3">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=farah"
+                                alt="profile_picture" class="me-2" />
+                            <h6>Sara Mendoza</h6>
+                            <span class="active ms-auto me-1"></span>
+                        </div>
+                    </li>
+                    <li class="mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=Ali"
+                                alt="profile_picture" class="me-2" />
+                            <h6>Ronald Roberts</h6>
+                            <span class="active ms-auto me-1"></span>
+                        </div>
+                    </li>
+                    <li class="mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=sara"
+                                alt="profile_picture" class="me-2" />
+                            <h6>Nancy Lee</h6>
+                            <span class="inactive ms-auto me-1">12 min</span>
+                        </div>
+                    </li>
+                    <li class="mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=Marie"
+                                alt="profile_picture" class="me-2" />
+                            <h6>Marie Jacksone</h6>
+                            <span class="inactive ms-auto me-1">7 min</span>
+                        </div>
+                    </li>
+                    <li class="mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=Nick"
+                                alt="profile_picture" class="me-2" />
+                            <h6>Nick Powell</h6>
+                            <span class="active ms-auto me-1"></span>
+                        </div>
+                    </li>
+                    <li class="mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=Sandra"
+                                alt="profile_picture" class="me-2" />
+                            <h6>Sandra Rivera</h6>
+                            <span class="active ms-auto me-1"></span>
+                        </div>
+                    </li>
+                    <li class="mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=Alex"
+                                alt="profile_picture" class="me-2" />
+                            <h6>Alex Freeman</h6>
+                            <span class="inactive ms-auto me-1">5 min</span>
+                        </div>
+                    </li>
+                    <li class="mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=Jerry"
+                                alt="profile_picture" class="me-2" />
+                            <h6>Jerry Jordan</h6>
+                            <span class="active ms-auto me-1"></span>
+                        </div>
+                    </li>
+                </ul>
+        </section>
+    </section>
+
+    <footer id="footer" class="footer py-3">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-4 text-center">
+                    &copy; SOCI 2023-2024
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="assets/images/logo.png" alt="logo" />
+                </div>
+                <div class="col-md-4 text-center">
+                    <p class="mb-0">Made By <span>Farha Dahman</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
