@@ -11,10 +11,10 @@
     <title>SOCI</title>
   </head>
 
-  <body class="h-100">
+  <body>
     <header>
       <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
+        <div class="container-fluid d-flex">
           <a class="navbar-brand pe-4" href="#">
             <img
               class="me-5 logo"
@@ -22,23 +22,13 @@
               alt="logo image" />
           </a>
           <div
-            class="d-flex form-inputs align-items-center justify-content-center ps-3" >
+            class="d-flex form-inputs align-items-center justify-content-center ps-4" >
             <input
               class="form-control d-none d-lg-block"
               type="text"
               placeholder="Search" />
             <i class="fas fa-solid fa-magnifying-glass d-none d-lg-block"></i>
           </div>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
           <button
             class="navbar-toggler d-md-block d-lg-none"
             type="button"
@@ -59,7 +49,17 @@
             aria-label="Toggle navigation">
             <span class="navbar-icon"><i class="fa-solid fa-gears py-1"></i></span>
           </button>
-          <div class="collapse navbar-collapse d-lg-block" id="navbarSupportedContent">
+          <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse d-lg-block " id="navbarSupportedContent">
             <nav class="navbar-nav ms-auto mb-2 align-items-center">
               <a class="nav-item nav-link active" aria-current="page" href="#">
                 <i class="fa-solid fa-user-plus"></i>
@@ -194,7 +194,7 @@
                 <img src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=ali"
                   alt="profile_picture"
                   class="me-1 profileImg" />
-                <h6 class="card-text">Ronald Roberts</h6>
+                <h6 class="card-text name">Ronald Roberts</h6>
               </div>
             </div>
             <div class="m-1 col story position-relative">
@@ -1000,7 +1000,7 @@
               src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=sally"
               alt="profile_picture"
               class="me-2" />
-            <h6>Alex Guerrero</h6>
+            <h6 class="name card-title">Alex Guerrero</h6>
             <span class="inactive ms-auto me-1">10 min</span>
           </a>
           <a
@@ -1010,7 +1010,7 @@
               src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=farah"
               alt="profile_picture"
               class="me-2" />
-            <h6>Sara Mendoza</h6>
+            <h6 class="name card-title">Sara Mendoza</h6>
             <span class="active ms-auto me-1"></span>
           </a>
           <a href="#" class="mb-2 d-flex align-items-center">
@@ -1018,7 +1018,7 @@
               src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=Ali"
               alt="profile_picture"
               class="me-2" />
-            <h6>Ronald Roberts</h6>
+            <h6 class="name card-title">Ronald Roberts</h6>
             <span class="active ms-auto me-1"></span>
           </a>
           <a href="#" class="mb-2 d-flex align-items-center">
@@ -1026,7 +1026,7 @@
               src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=sara"
               alt="profile_picture"
               class="me-2" />
-            <h6>Nancy Lee</h6>
+            <h6 class="name card-title">Nancy Lee</h6>
             <span class="inactive ms-auto me-1">12 min</span>
           </a>
           <a href="#" class="mb-2 d-flex align-items-center">
@@ -1034,7 +1034,7 @@
               src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=Marie"
               alt="profile_picture"
               class="me-2" />
-            <h6>Marie Jacksone</h6>
+            <h6 class="name card-title">Marie Jacksone</h6>
             <span class="inactive ms-auto me-1">7 min</span>
           </a>
           <a href="#" class="mb-2 d-flex align-items-center">
@@ -1042,7 +1042,7 @@
               src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=Nick"
               alt="profile_picture"
               class="me-2" />
-            <h6>Nick Powell</h6>
+            <h6 class="name card-title">Nick Powell</h6>
             <span class="active ms-auto me-1"></span>
           </a>
           <a href="#" class="mb-2 d-flex align-items-center">
@@ -1050,7 +1050,7 @@
               src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=Sandra"
               alt="profile_picture"
               class="me-2" />
-            <h6>Sandra Rivera</h6>
+            <h6 class="name card-title">Sandra Rivera</h6>
             <span class="active ms-auto me-1"></span>
           </a>
           <a href="#" class="mb-2 d-flex align-items-center">
@@ -1058,7 +1058,7 @@
               src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=Alex"
               alt="profile_picture"
               class="me-2" />
-            <h6>Alex Freeman</h6>
+            <h6 class="name card-title">Alex Freeman</h6>
             <span class="inactive ms-auto me-1">5 min</span>
           </a>
           <a href="#" class="mb-2 d-flex align-items-center">
@@ -1066,7 +1066,7 @@
               src="https://api.dicebear.com/6.x/avataaars/svg?backgroundColor=c0aede&seed=Jerry"
               alt="profile_picture"
               class="me-2" />
-            <h6>Jerry Jordan</h6>
+            <h6 class="name card-title">Jerry Jordan</h6>
             <span class="active ms-auto me-1"></span>
           </a>
         </nav>
@@ -1077,7 +1077,7 @@
       <div class="container">
         <div class="row justify-content-center align-items-center">
           <div class="col-md-4 text-center">&copy; SOCI 2023-2024</div>
-          <div class="col-md-4 text-center">
+          <div class="col-md-4 text-center w-25">
             <img src="assets/images/logo.png" alt="logo" />
           </div>
           <div class="col-md-4 text-center">
