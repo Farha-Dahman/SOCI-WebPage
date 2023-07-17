@@ -3,7 +3,7 @@
         display:none !important;
     }
     .post-menu {
-        flex-direction: column;
+        flex-direction: column !important;
         justify-content: center;
     }
 }
