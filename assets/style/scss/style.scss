@@ -190,13 +190,12 @@ nav {
                 @include post-image;
                 margin: 0;
                 }
-            .Image-Info{
-                img{
-                    @include person-img;
-                }
             }    
         }
         .desc{ 
+            img{
+                @include person-img;
+            }
             p{
             font-size: 15px;
             font-weight: 400;
@@ -208,7 +207,6 @@ nav {
             span {
                 font-size: 14px;
                 .icon{
-                    margin-left: 25px;
                     margin-right: 2px;
                     font-weight: 600;
                     color: $icon-color;
@@ -255,7 +253,6 @@ nav {
     }
     .name{
         font-size: 14px;
-    }
     }
 }
 
